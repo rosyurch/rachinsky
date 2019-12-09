@@ -4,4 +4,26 @@
     align-items: center;
     width: 80%;
     margin: auto;
+    padding: 5px 0;
+    border: 1px green solid;
+    border-radius: 20px;
+}
+
+.add-popup_input {
+    padding: 12px;
+    width: 90%;
+    font-size: 1.2em;
+    background-color: #282c34;
+    color: #fff;
+    border: 1px yellowgreen solid;
+    border-radius: 8px;
+}
+
+.add-popup_button {
+    width: 3em;
+    margin: 5px 0;
+    font-size: 2em;
+    color: #fff;
+    background-color: green;
+    border: 1px solid yellowgreen;
 }
