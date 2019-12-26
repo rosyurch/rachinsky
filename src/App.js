@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import './App.css';
-import './AddPlayerPopup.css';
-import AddPlayerPopup from './AddPlayerPopup';
-import generateId from './id'; // only for a one game
+import './css/App.css';
+import generateId from './helpers/id'; // only for a single game
+import AddButton from './AddButton';
 
 function App() {
     const [players, setPlayers] = useState([
-        { id: 0, name: '123', answers: [] },
+        // mocked players
+        { id: 0, name: '123', answers: [10, -20, 30, -10, 20] },
         { id: 1, name: '456', answers: [] },
         { id: 9, name: '89+', answers: [] },
     ]);
@@ -28,23 +28,30 @@ function App() {
         setName(e.target.value);
     };
 
+    const closeTheAddPlayerPopup = e => {
+        e.preventDefault();
+        setAddPopupIsOpened(false);
+    };
+
     return (
         <div className="App">
             <header className="header">Свояк9000</header>
-            <div className="score-field">
+
+            <ul className="score-field">
                 {players.map(player => (
-                    <div>
+                    <li key={player.id}>
                         <h3>{player.name}</h3>
-                        
-                    </div>
+                    </li>
                 ))}
-            </div>
-            <div className="add-player-wrap">
-                <button className="add-player" onClick={addPlayerButtonHandle}>
-                    <span className="plus-sign">+</span>
-                </button>
-                {addPopupIsOpened && <AddPlayerPopup add={addPlayerSubmit} change={getNameFromInput} />}
-            </div>
+            </ul>
+
+            <AddButton
+                addPlayer={addPlayerButtonHandle}
+                add={addPlayerSubmit}
+                change={getNameFromInput}
+                close={closeTheAddPlayerPopup}
+                isOpened={addPopupIsOpened}
+            />
         </div>
     );
 }

@@ -21,9 +21,14 @@
 
 .add-popup_button {
     width: 3em;
-    margin: 5px 0;
+    margin: 5px 20px;
     font-size: 2em;
     color: #fff;
     background-color: green;
     border: 1px solid yellowgreen;
+}
+
+.add-popup_close {
+    background-color: #f00;
+    color: #000;
 }
