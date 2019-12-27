@@ -1,0 +1,44 @@
+.player_card {
+    margin: 10px;
+    padding-bottom: 10px;
+    border: 1px greenyellow solid;
+    border-radius: 15px;
+}
+
+.player_score {
+    font-weight: 900;
+    font-size: 1.6em;
+}
+
+.player_name {
+    font-size: 2em;
+}
+
+.player_answers-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.player_answer {
+    font-size: 1.2em;
+    min-width: 45px;
+}
+
+.player_answer-correct {
+    color: lightgreen;
+}
+
+.player_answer-wrong {
+    color: red;
+}
+
+.player_answer-button-separator {
+    margin: 10px;
+}
+
+.player_button {
+    border: 1px solid #000;
+    margin: 10px;
+}
