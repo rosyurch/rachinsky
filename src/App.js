@@ -4,14 +4,8 @@ import AddButton from './AddButton';
 import Player from './Player';
 import './css/App.css';
 
-const mockedPlayersState = [
-    { id: 0, name: '123', answers: [10, -20, 30, -10, 20] },
-    { id: 1, name: '456', answers: [] },
-    { id: 9, name: '89+', answers: [] },
-];
-
 function App() {
-    const [players, setPlayers] = useState(mockedPlayersState);
+    const [players, setPlayers] = useState([]);
     const [addPopupIsOpened, setAddPopupIsOpened] = useState(false);
     const [name, setName] = useState(''); // for getting player name form popup
 
