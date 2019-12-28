@@ -5,8 +5,10 @@ function Player({ id, name, answers, press }) {
     const pressed = price => press(id, name, answers, price);
     return (
         <div className="player_card">
-            <h3 className="player_name">{name}</h3>
-            <p className="player_score">{answers.reduce((acc, cur) => acc + cur, 0)}</p>
+            <div className="player_header">
+                <h3 className="player_name">{name}</h3>
+                <p className="player_score">{answers.reduce((acc, cur) => acc + cur, 0)}</p>
+            </div>
             <ul className="player_answers-list">
                 {answers.map(ans => (
                     <li key={Math.random() * 1000} className={`player_answer player_answer-${ans > 0 ? 'correct' : 'wrong'}`}>

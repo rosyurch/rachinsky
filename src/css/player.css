@@ -5,9 +5,15 @@
     border-radius: 15px;
 }
 
+.player_header {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .player_score {
     font-weight: 900;
-    font-size: 1.6em;
+    font-size: 2em;
 }
 
 .player_name {
@@ -17,7 +23,6 @@
 .player_answers-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     list-style-type: none;
 }
 
@@ -35,10 +40,20 @@
 }
 
 .player_answer-button-separator {
-    margin: 10px;
+    margin: 0 10px;
 }
 
 .player_button {
     border: 1px solid #000;
-    margin: 10px;
+    margin: 7px 10px;
+    padding: 10px;
+    color: #000;
+}
+
+.player_button-pos {
+    background-color: lightgreen;
+}
+
+.player_button-neg {
+    background-color: lightcoral;
 }
