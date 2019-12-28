@@ -9,15 +9,44 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 5px;
 }
 
 .player_score {
+    min-width: 70px;
     font-weight: 900;
     font-size: 2em;
 }
 
 .player_name {
     font-size: 2em;
+}
+
+.player_control {
+    position: absolute;
+    padding: 4px;
+    border: 1px #fff solid;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.player_delete {
+    top: 0;
+    left: 0;
+    border-radius: 15px 0 0 0;
+    border-top: 0;
+    border-left: 0;
+}
+
+.player_reset {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 0;
+    border-top: 0;
+    border-right: 0;
 }
 
 .player_answers-list {

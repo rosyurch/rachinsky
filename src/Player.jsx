@@ -1,13 +1,20 @@
 import React from 'react';
 import './css/player.css';
 
-function Player({ id, name, answers, press }) {
+function Player({ id, name, answers, press, reset, deletePlayer }) {
     const pressed = price => press(id, name, answers, price);
+
     return (
         <div className="player_card">
             <div className="player_header">
+                <button className="player_control player_delete" onClick={e => deletePlayer(id)}>
+                    &#128465;
+                </button>
                 <h3 className="player_name">{name}</h3>
                 <p className="player_score">{answers.reduce((acc, cur) => acc + cur, 0)}</p>
+                <button className="player_control player_reset" onClick={e => reset(id, name)}>
+                    &#10227;
+                </button>
             </div>
             <ul className="player_answers-list">
                 {answers.map(ans => (

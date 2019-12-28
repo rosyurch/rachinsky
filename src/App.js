@@ -35,6 +35,17 @@ function App() {
         setAddPopupIsOpened(false);
     };
 
+    const deletePlayer = id => {
+        const newState = players.filter(p => p.id !== id);
+        setPlayers(newState);
+    };
+
+    const resetPlayerScore = (id, name) => {
+        const arrWithoutOne = players.filter(p => p.id !== id);
+        const newState = [...arrWithoutOne, { id, name, answers: [] }];
+        setPlayers(newState);
+    };
+
     const registerAnswer = (id, name, answers, price) => {
         const playersWithoutCurrent = players.filter(p => p.id !== id);
 
@@ -53,7 +64,8 @@ function App() {
                     .sort((a, b) => a.id - b.id)
                     .map(player => (
                         <li key={player.id}>
-                            <Player {...player} press={registerAnswer} /> {/* like an actual button press*/}
+                            <Player {...player} press={registerAnswer} deletePlayer={deletePlayer} reset={resetPlayerScore} />{' '}
+                            {/* like an actual button press*/}
                         </li>
                     ))}
             </ul>
