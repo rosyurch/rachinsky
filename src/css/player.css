@@ -14,7 +14,7 @@
 }
 
 .player_score {
-    min-width: 70px;
+    margin-right: 40px;
     font-weight: 900;
     font-size: 2em;
 }
