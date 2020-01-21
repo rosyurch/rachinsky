@@ -4,43 +4,51 @@ import AddButton from './AddButton';
 import Player from './Player';
 import './css/App.css';
 
+type player = {
+    id: number;
+    name: string;
+    answers: number[];
+};
+
+const init: player[] = []; // should be a better way for initial state value
+
 function App() {
-    const [players, setPlayers] = useState([]);
+    const [players, setPlayers] = useState(init);
     const [addPopupIsOpened, setAddPopupIsOpened] = useState(false);
     const [name, setName] = useState(''); // for getting player name form popup
 
-    const addPlayerSubmit = e => {
+    const addPlayerSubmit = (e: React.FormEvent): void => {
         e.preventDefault();
         const id = generateId(players);
         setPlayers([...players, { id, name, answers: [] }]);
         setAddPopupIsOpened(false);
     };
 
-    const addPlayerButtonHandle = e => {
+    const addPlayerButtonHandle = (): void => {
         setAddPopupIsOpened(true);
     };
 
-    const getNameFromInput = e => {
+    const getNameFromInput = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setName(e.target.value);
     };
 
-    const closeTheAddPlayerPopup = e => {
+    const closeTheAddPlayerPopup = (e: React.FormEvent): void => {
         e.preventDefault();
         setAddPopupIsOpened(false);
     };
 
-    const deletePlayer = id => {
+    const deletePlayer = (id: number): void => {
         const newState = players.filter(p => p.id !== id);
         setPlayers(newState);
     };
 
-    const resetPlayerScore = (id, name) => {
+    const resetPlayerScore = (id: number, name: string): void => {
         const arrWithoutOne = players.filter(p => p.id !== id);
         const newState = [...arrWithoutOne, { id, name, answers: [] }];
         setPlayers(newState);
     };
 
-    const registerAnswer = (id, name, answers, price) => {
+    const registerAnswer = (id: number, name: string, answers: number[], price: number): void => {
         const playersWithoutCurrent = players.filter(p => p.id !== id);
 
         const registeredAnswer = [...answers, price];
