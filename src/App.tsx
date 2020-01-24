@@ -3,15 +3,10 @@ import generateId from './helpers/id'; // only for a single game
 import AddButton from './AddButton';
 import Player from './Player';
 import './css/App.css';
-
-type Player = {
-    id: number;
-    name: string;
-    answers: number[];
-};
+import { PlayerType } from './types';
 
 function App() {
-    const [players, setPlayers] = useState<Player[]>([]);
+    const [players, setPlayers] = useState<PlayerType[]>([]);
     const [addPopupIsOpened, setAddPopupIsOpened] = useState(false);
     const [name, setName] = useState(''); // for getting player name form popup
 
@@ -62,7 +57,7 @@ function App() {
             <ul className="score-field">
                 {players
                     .sort((a, b) => a.id - b.id)
-                    .map(player => (
+                    .map((player: PlayerType) => (
                         <li key={player.id}>
                             <Player {...player} press={registerAnswer} deletePlayer={deletePlayer} reset={resetPlayerScore} />{' '}
                             {/* like an actual button press*/}
