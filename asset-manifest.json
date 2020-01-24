@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/rachinsky/static/css/main.61ac6126.chunk.css",
-    "main.js": "/rachinsky/static/js/main.b15f2b9a.chunk.js",
-    "main.js.map": "/rachinsky/static/js/main.b15f2b9a.chunk.js.map",
+    "main.js": "/rachinsky/static/js/main.3e354b50.chunk.js",
+    "main.js.map": "/rachinsky/static/js/main.3e354b50.chunk.js.map",
     "runtime-main.js": "/rachinsky/static/js/runtime-main.dd92f284.js",
     "runtime-main.js.map": "/rachinsky/static/js/runtime-main.dd92f284.js.map",
     "static/js/2.a89e23de.chunk.js": "/rachinsky/static/js/2.a89e23de.chunk.js",
     "static/js/2.a89e23de.chunk.js.map": "/rachinsky/static/js/2.a89e23de.chunk.js.map",
     "index.html": "/rachinsky/index.html",
-    "precache-manifest.14c1c592e7f8fa325188607635e55c12.js": "/rachinsky/precache-manifest.14c1c592e7f8fa325188607635e55c12.js",
+    "precache-manifest.5242957d4b8fd7cd067ffd33eb949040.js": "/rachinsky/precache-manifest.5242957d4b8fd7cd067ffd33eb949040.js",
     "service-worker.js": "/rachinsky/service-worker.js",
     "static/css/main.61ac6126.chunk.css.map": "/rachinsky/static/css/main.61ac6126.chunk.css.map",
     "static/js/2.a89e23de.chunk.js.LICENSE": "/rachinsky/static/js/2.a89e23de.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.dd92f284.js",
     "static/js/2.a89e23de.chunk.js",
     "static/css/main.61ac6126.chunk.css",
-    "static/js/main.b15f2b9a.chunk.js"
+    "static/js/main.3e354b50.chunk.js"
   ]
 }
