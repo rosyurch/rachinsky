@@ -4,16 +4,14 @@ import AddButton from './AddButton';
 import Player from './Player';
 import './css/App.css';
 
-type player = {
+type Player = {
     id: number;
     name: string;
     answers: number[];
 };
 
-const init: player[] = []; // should be a better way for initial state value
-
 function App() {
-    const [players, setPlayers] = useState(init);
+    const [players, setPlayers] = useState<Player[]>([]);
     const [addPopupIsOpened, setAddPopupIsOpened] = useState(false);
     const [name, setName] = useState(''); // for getting player name form popup
 
